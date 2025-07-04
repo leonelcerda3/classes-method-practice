@@ -8,8 +8,13 @@ class Dog:
         self.age = age 
 
     
-    def is_new_dog(self):
-        return new_dog_name
+    def get_name(self):
+        return self.name
+    
+    def set_name(self, newname):
+        self.name = newname
+    
+
         
     
     
@@ -19,9 +24,13 @@ buddy = Dog("Buddy", 3)
 print(buddy.name)
 print(buddy.age)
 
-new_dog_name = input("What should the new dog name be: ")
+newname = input("What should the new dog name be: ")
 
-print(f"New dog name is now {BOLD}{buddy.is_new_dog().upper()}{END}")
+buddy.set_name(newname)
+
+#buddy.name = newname "does the same just for simpler getters and setters"
+
+print(f"New dog name is now {BOLD}{buddy.get_name().upper()}{END}")
 
 
-#print(f"New dog name is now", {BOLD}buddy.is_new_dog().upper(){END})
+
